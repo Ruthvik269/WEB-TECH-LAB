@@ -1,0 +1,68 @@
+h1.heading{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgb(255, 0, 34);
+text-decoration: double;
+text-transform: uppercase;
+}
+h1 {
+font-family: Arial, sans-serif;
+}
+p {
+font-family: 'Times New Roman', serif;
+}
+a{
+font-size: 25px;
+}
+a:link {
+color: blue;
+text-decoration: none;
+}
+a:visited {
+color: orange;
+}
+a:hover {
+color: red;
+text-decoration: underline;
+}
+a:active {
+color: green;
+}
+.hidden-element {
+visibility: hidden;
+}
+.bg{
+min-height: 60vh;
+  }
+.norepeat{
+background: url('./logo.png') no-repeat;
+}
+.repeat{
+background: url('./logo.png') ;
+}
+.normal
+{
+color: blue;
+}
+.bold{
+font-weight: bold;
+color: blue;
+}
+.italic{
+font-style: italic;
+color: blue;
+}
+.oblique{
+font-style: oblique;
+color: blue;
+}
+section{
+border: 1px solid black;
+padding: 10px;
+}
+.small-caps{
+font-variant: small-caps;
+color: blue;
+}
+Green{
+color: green;
+}
