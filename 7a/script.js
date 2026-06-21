@@ -1,15 +1,28 @@
-let buttons = document.querySelectorAll('button')
-let display = document.querySelector('input')
-buttons.forEach(button => {
-button.addEventListener('click', (e) => {
-let button = e.target
-if (button.innerHTML == 'AC')
-display.value = ''
-else if(button.innerHTML == '=')
-display.value = eval(display.value)
-else if(button.innerHTML == 'CE')
-display.value = display.value.slice(0, -1)
-else
-display.value += button.innerHTML
-})
-})
+let input = document.querySelector("input"); 
+let buttons = document.querySelectorAll("button"); 
+let string = ""; 
+ 
+for(button of buttons){ 
+    button.addEventListener("click",(e) =>{ 
+        if(e.currentTarget.innerText === "="){ 
+            if(string !== ""){ 
+                string = eval(string); 
+                input.value = string; 
+            } 
+            return; 
+        } 
+        else if(e.currentTarget.innerText === "AC"){ 
+            string = ""; 
+            input.value = string; 
+            return; 
+        } 
+        else if(e.currentTarget.innerText === "DEL"){ 
+            string = string.substring(0,string.length-1); 
+            input.value = string; 
+            return; 
+        } 
+         
+        string += e.currentTarget.innerText; 
+        input.value = string; 
+    }) 
+} 
