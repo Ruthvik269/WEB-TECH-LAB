@@ -1,3 +1,4 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head> 
   <title>Test Marks Average</title> 
@@ -8,14 +9,10 @@
       padding: 30px; 
       text-align: center; 
     } 
-    h2 { 
-      color:black; 
-    } 
     form { 
       background:white; 
       padding: 20px; 
-      display: inline-block; 
-      border-radius: 8px; 
+      display: inline-block;  
     } 
     label { 
       display: block; 
@@ -32,10 +29,7 @@
     input[type="button"] { 
       background:black; 
       color: white; 
-      border: none; 
       padding: 10px 20px; 
-      border-radius: 5px; 
-      cursor: pointer; 
       margin-top: 15px; 
     } 
   </style> 
@@ -43,9 +37,9 @@
 function calculateAverage() {
     var reg = document.getElementById("reg").value.trim();
     var sub = document.getElementById("sub").value.trim();
-    var t1 = Number(document.getElementById("t1").value);
-    var t2 = Number(document.getElementById("t2").value);
-    var t3 = Number(document.getElementById("t3").value);
+    var t1 = parseInt(document.getElementById("t1").value);
+    var t2 = parseInt(document.getElementById("t2").value);
+    var t3 = parseInt(document.getElementById("t3").value);
 
     // Validation
     if (reg === "" || sub === "" || isNaN(t1) || isNaN(t2) || isNaN(t3)) {
@@ -57,9 +51,7 @@ function calculateAverage() {
     var scores = [t1, t2, t3];
 
     // Sort in descending order
-    scores.sort(function(a, b) {
-        return b - a;
-    });
+    scores.sort((a, b) => b - a);
 
     // Average of best two marks
     var avg = (scores[0] + scores[1]) / 2;
